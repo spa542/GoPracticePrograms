@@ -80,3 +80,20 @@ Note: You need to ensure that all files are included in go run when running a pr
 Note: When a function has a receiver of a particular type, any variable with that type gets access to that particular function
 
 Indexing in Go is just like in Python.
+
+When writing a file, you need to convert the data to a byte slice before writing it to the file.
+
+Type conversion works just like in Java/C++
+
+Setup a test file by running "go mod init <module_name>" -> This is required to run a test function from within VSCode and/or run "go test" from the terminal
+
+Go is not like using a testing framework like other languages. Instead, it has a built-in testing package that is used to write tests.
+* A test file must have _test.go
+* To run all tests in a package, run the command "go test"
+* Tests should start with capitals and "Test"
+* Regular functions should be camel case
+
+EvenOrOdd Project completed for this section.
+
+## Section 4: Organizing Data with Structs
+

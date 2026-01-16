@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// Create a new variable in standard way with type declaration
 	// var card string = "Ace of Spades"
@@ -26,6 +28,15 @@ func main() {
 
 	hand.print()
 	reaminingDeck.print()
+
+	fmt.Println(reaminingDeck.toString())
+
+	reaminingDeck.shuffle()
+
+	reaminingDeck.saveToFile("my_cards")
+
+	newDeck := newDeckFromFile("my_cards")
+	newDeck.print()
 
 }
 
