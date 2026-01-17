@@ -95,5 +95,46 @@ Go is not like using a testing framework like other languages. Instead, it has a
 
 EvenOrOdd Project completed for this section.
 
+
 ## Section 4: Organizing Data with Structs
+
+All about structs. They are just a collection of properties that are related together. Exactly like in C. You can combine structs with receiver functions to essentially create classes.
+
+We can embed structs within structs. They can also have receiver functions.
+
+Structs are used as pointers. This is exactly how it is managed in C.
+
+A * in front of a type means wer are working with a pointer to that type. A * in front of the variable name means we are working with the value that the pointer is pointing to.
+
+Arrays are primitive data structures, can't be resized, and they are rarely used since they cannot be resized.
+
+Slices can grow and shrink and are used in 99% of the time for lists of elements. Note that the slice is a reference to the underlying array, so if you modify the slice, you are modifying the underlying array. AKA a reference type.
+
+Value types include int, float, stirng, bool, and structs.
+Reference types include slices, maps, channels, pointers, and functions.
+
+The dot operator will automatically dereference the pointer for you (no arrow function like in C). You just need to know what is pass by reference and what is pass by value to read the code accordignly.
+
+
+## Section 5: Maps
+
+Maps are like dicts in Python and identical to maps in C++. Note that the keys must all be of the same type and the values must all be of the same type.
+
+Some differences between maps and structs.
+* Maps
+    * All keys must be the same type
+    * All values must be the same type
+    * Keys are indexed - we can iterate over them
+    * Use to represent a collection of related properties
+    * Don't need to know all the keys at compile time
+    * Reference type!
+* Stucts
+    * Values can be of different types
+    * Keys don't support indexing
+    * Value type!
+    * You need to know all the different fields at compile time
+    * Use to represent a "thing" with a lot of different properties
+
+
+ ## Section 6: Interfaces
 
