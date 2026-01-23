@@ -138,3 +138,26 @@ Some differences between maps and structs.
 
  ## Section 6: Interfaces
 
+A key topic in the Go language.
+
+We know that...
+* Every value has a type.
+* Every function has to specify the type of its arguments.
+
+If we use receivers without interfaces, then we have to reuse the same code but define the functions with the various types we want to use.
+
+An interface is treated as a type. In the exmaple, we defined a bot interface that requires a getGreeting() string function. Then we can use that interface as a type for a function argument to allow for passing types that adhere to the interface as arguments.
+
+We have concrete types like map, struct, int, string, etc. We also have abstract types like interfaces (interface type).
+
+Other interface notes:
+* Interfaces are not generic types (Go does not hae generics)
+* Interfaces are 'implicit' (We dont manually have ot say that our custom type satisfies some interface)
+* Interfaces are a contract to help us manage types (Garbage in -> Garbage out - If our custom type's implementation of a function is broken then interfaces won't help us)
+* Interfaces are tough to read 
+
+We can place a interface as a value meaning that the value can be any type that satisfies the interface.
+
+We can also have an interface contain a group of other interfaces.
+
+We can write an interface function that takes one or more types and then returns a common type that works for all the combinations but utilizes the same logic.
