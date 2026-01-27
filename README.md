@@ -161,3 +161,19 @@ We can place a interface as a value meaning that the value can be any type that 
 We can also have an interface contain a group of other interfaces.
 
 We can write an interface function that takes one or more types and then returns a common type that works for all the combinations but utilizes the same logic.
+
+
+## Section 7: Channels and Go Routines
+
+All about concurrent programming!
+
+When a go program is executed, one go routine is started. If we place the keyword "go" in front of a function, the function will be executed within it's own go routine!
+
+The go scheduler runs one routine until it finishes or makes a blocking call (like an HTTP request). 
+
+Note that with one CPU, we are never truly running multiple routines at the same time. We are just switching between them based on the CPU clock speed and the scheduler.
+
+The scheduler will run one thread on each "logical" core.
+
+* Concurrency - We can have multiple threads executing code. If one thread blocks, another one is picked up and worked on.
+* Parallelism - Multiple threads executed at the exact same time. Requires multiple CPU's.
