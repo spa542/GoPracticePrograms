@@ -177,3 +177,15 @@ The scheduler will run one thread on each "logical" core.
 
 * Concurrency - We can have multiple threads executing code. If one thread blocks, another one is picked up and worked on.
 * Parallelism - Multiple threads executed at the exact same time. Requires multiple CPU's.
+
+We can create a channel to pass data between go routines. In most cases, we want the main go routing to wait until the child go routines complete so that it can do something with the results.
+* It is important to note that channels are typed just like everything else in Go.
+    - For Example: Once we create a channel of type string, we can only pass strings through that channel.
+
+A channel is essentially a pipe that allows us to pass data between go routines. 
+Examples:
+* channel <- 5 (send thee value 5 into this channel)
+* myNumber <- (Wait for a value to be sent into the channel. When we get one, assign the value to myNumber)
+* fmt.Println(<- channel) (Wait for a value to be sent into the channel. When we get one, log it out immediately)
+
+Receiving messages from a channel is a blocking operation. This means that the program will wait until a value is sent to the channel before continuing.
